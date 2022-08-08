@@ -1,6 +1,6 @@
 {
   "name": "code-frame-error",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "just an error with a code frame",
   "main": "dist/code-frame-error.cjs",
   "module": "dist/code-frame-error.mjs",
