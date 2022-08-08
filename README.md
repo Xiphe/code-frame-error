@@ -31,7 +31,7 @@ console.log(err.toString(options));
 
 CodeFrameError: Unexpected sit, expected dolor
 
-text.txt
+text.txt:1:13
 > 1 | lorem ipsum sit amet
     |             ^^^
 

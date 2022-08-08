@@ -15,11 +15,16 @@ export default class CodeFrameError extends Error {
     Object.setPrototypeOf(this, CodeFrameError.prototype);
   }
   toString(options?: BabelCodeFrameOptions) {
+    const { name, rawLines, location } = this.file;
     return [
       `CodeFrameError: ${this.message}`,
       '',
-      this.file.name,
-      codeFrameColumns(this.file.rawLines, this.file.location, options),
+      name
+        ? `${name}:${location.start.line}${
+            location.start.column ? `:${location.start.column}` : ''
+          }`
+        : undefined,
+      codeFrameColumns(rawLines, location, options),
       '',
     ]
       .filter((l) => l !== undefined)

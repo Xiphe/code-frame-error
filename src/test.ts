@@ -74,7 +74,7 @@ test('code-frame-error', async (t) => {
       err.toString(),
       `CodeFrameError: Everything should be ok
 
-App.tsx
+App.tsx:3:32
   1 | import { useState } from 'react';
   2 | export default function App() {
 > 3 |   const [ok, setOk] = useState(false);
