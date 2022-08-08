@@ -3,18 +3,18 @@
   "version": "0.1.0",
   "description": "just an error with a code frame",
   "main": "dist/code-frame-error.cjs",
-  "module": "dist/code-frame-error.js",
+  "module": "dist/code-frame-error.mjs",
   "types": "dist/code-frame-error.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/code-frame-error.js",
+      "import": "./dist/code-frame-error.mjs",
       "require": "./dist/code-frame-error.cjs",
       "types": "./dist/code-frame-error.d.ts"
     }
   },
   "scripts": {
     "build": "tsc && npm run build:esm && npm run build:cjs",
-    "build:esm": "npx esbuild src/code-frame-error.ts --outfile=dist/code-frame-error.js --format=esm --target=node18",
+    "build:esm": "npx esbuild src/code-frame-error.ts --outfile=dist/code-frame-error.mjs --format=esm --target=node18",
     "build:cjs": "npx esbuild src/code-frame-error.ts --outfile=dist/code-frame-error.cjs --format=cjs --target=node14",
     "test": "node -r esbuild-register src/test.ts"
   },
