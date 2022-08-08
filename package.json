@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "build": "tsc && npm run build:esm && npm run build:cjs",
+    "build": "rm -rf dist && tsc && npm run build:esm && npm run build:cjs",
     "prepare": "npm run build && npm run test",
     "build:esm": "npx esbuild src/code-frame-error.ts --outfile=dist/code-frame-error.mjs --format=esm --target=node18",
     "build:cjs": "npx esbuild src/code-frame-error.ts --outfile=dist/code-frame-error.cjs --format=cjs --target=node14",
